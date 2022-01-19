@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Download } from './download';
-import download from 'downloadjs';
 
 export function Template(props) {
   
