@@ -147,9 +147,10 @@ export function Template(props) {
 
   const handleClick = () => {
     const image = canvasRef.current.toDataURL();
-    const mimeType = image.split(";")[0];
-    const extension = image.split(";")[0].split("/")[1];
-    download(image, `image.${extension}`, mimeType);
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = 'profile.png';
+    link.click();
   }
 
   return (
