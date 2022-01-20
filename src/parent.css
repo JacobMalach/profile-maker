@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 200px;
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px;  
+}

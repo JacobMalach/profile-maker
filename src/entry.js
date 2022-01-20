@@ -20,7 +20,7 @@ export class Entry extends React.Component {
 
   preventBadPaste(e) {
     const category = this.state.category;
-    if (category == "Age") {
+    if (category === "Age") {
       var num = e.clipboardData.getData('text');
       num = e.target.value + num;
       num = parseInt(num)
@@ -33,24 +33,25 @@ export class Entry extends React.Component {
   render() {
     const category = this.state.category;
     var type = "text"
+    var value = ""
     var min = "0";
     var max = "0";
-    if (category == "Age") {
+    if (category === "Age") {
       type = "number"
       max = "120";
     } else if (this.state.bars.includes(category)) {
       type = "range"
       max = "10";
-    } else if (category == "3x3") {
+      value = "0";
+    } else if (category === "3x3") {
       type = "file";
     }
     return (
-      // Add onPaste to prevent values that are too high
       <div>
         <h2>Enter {category}:</h2>
         <input 
         onChange={this.handleChange} 
-        type={type} min={min} max={max} />
+        type={type} min={min} max={max} defaultValue={value} />
       </div>
     );
   }
