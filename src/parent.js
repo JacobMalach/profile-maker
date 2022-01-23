@@ -21,7 +21,7 @@ export function Parent() {
 
   return (
     
-    <div>
+    <div class="bg-secondary">
       <h1>Profile Maker</h1>
       <div class="row justify-content-center">
         <div class="col-sm-2">
