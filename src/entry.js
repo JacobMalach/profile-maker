@@ -42,13 +42,13 @@ export class Entry extends React.Component {
     } else if (this.state.bars.includes(category)) {
       type = "range"
       max = "10";
-      value = "0";
+      value = "5";
     } else if (category === "3x3") {
       type = "file";
     }
     return (
       <div>
-        <h2>Enter {category}:</h2>
+        <h3>Enter {category}:</h3>
         <input 
         onChange={this.handleChange} 
         type={type} min={min} max={max} defaultValue={value} />

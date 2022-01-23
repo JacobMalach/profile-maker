@@ -4,10 +4,11 @@ h1 {
 
 input {
     width: 200px;
+    margin-bottom: 10px;
 }
 
 .bar {
     display: flex;
-    justify-content: center;
-    margin: 10px;  
+    justify-content: center; 
+    margin-top: 10px;
 }

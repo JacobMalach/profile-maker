@@ -9,6 +9,10 @@ export function Template(props) {
     const ctx = prepCanvas();
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, 1000, 1000);
+    ctx.fillStyle = 'black';
+    ctx.font = "30px Helvetica";
+    ctx.fillText("Upload Image", 510, 450);
+    ctx.fillStyle = 'black';
     ctx.font = "40px Century Gothic";
     ctx.fillStyle = 'black';
     ctx.fillText("Info:", 10, 40)
@@ -39,7 +43,7 @@ export function Template(props) {
       ctx.strokeRect(120, 321 + (i * 54), 300, 43);
     }
     for (let i = 0; i < 6; i++) {
-      statBar(460, 51 + (i * 35), 0);
+      statBar(460, 51 + (i * 35), 5);
     }
   }, [])
 
