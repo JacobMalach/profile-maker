@@ -14,82 +14,49 @@ export function Parent() {
   const [health, setHealth] = useState('5');
   const [charisma, setCharisma] = useState('5');
   const [happiness, setHappiness] = useState('5');
-  const [games, setGames] = useState('');
+  const [game, setGame] = useState('');
   const [anime, setAnime] = useState('');
-  const [books, setBooks] = useState('');
-  const [movies, setMovies] = useState('');
+  const [book, setBook] = useState('');
+  const [movie, setMovie] = useState('');
 
   return (
     
-    <div class="bg-secondary">
+    <div class="row justify-content-center">
       <h1>Profile Maker</h1>
-      <div class="row justify-content-center">
-        <div class="col-sm-2">
-          <Entry onChange={setName} category="Name"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setAge} category="Age"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setGender} category="Gender"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setCountry} category="Country"/>
-        </div>
+      <div class="col-md-3">
+        <Entry onChange={setName} category="Name"/>
+        <Entry onChange={setGender} category="Gender"/>
+        <Entry onChange={setIntellect} category="Intellect"/>
+        <Entry onChange={setWealth} category="Wealth"/>
+        <Entry onChange={setCharisma} category="Charisma"/>
+        <Entry onChange={setGame} category="Game"/>
+        <Entry onChange={setBook} category="Book"/>
       </div>
-
-      <div class="row justify-content-center">
-        <div class="col-sm-2">
-          <Entry onChange={setIntellect} category="Intellect"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setLooks} category="Looks"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setWealth} category="Wealth"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setHealth} category="Health"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setCharisma} category="Charisma"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setHappiness} category="Happiness"/>
-        </div>
+      <div class="col-md-3">
+        <Entry onChange={setAge} category="Age"/>
+        <Entry onChange={setCountry} category="Country"/>
+        <Entry onChange={setLooks} category="Looks"/>
+        <Entry onChange={setHealth} category="Health"/>
+        <Entry onChange={setHappiness} category="Happiness"/>
+        <Entry onChange={setAnime} category="Anime"/>
+        <Entry onChange={setMovie} category="Movie"/>
       </div>
-
-      <div class="row justify-content-center">
-        <div class="col-sm-2">
-        <Entry onChange={setGames} category="Games"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setAnime} category="Anime"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setBooks} category="Books"/>
-        </div>
-        <div class="col-sm-2">
-          <Entry onChange={setMovies} category="Movies"/>
-        </div>
-      </div>
-
-      <div className="bar">
-      <Graphics 
-        name={name}
-        age={age}
-        gender={gender}
-        country={country}
-        intellect={intellect}
-        looks={looks}
-        wealth={wealth}
-        health={health}
-        charisma={charisma}
-        happiness={happiness}
-        games={games}
-        anime={anime}
-        books={books}
-        movies={movies}/>
+      <div class="col-md-6">
+        <Graphics 
+          name={name}
+          age={age}
+          gender={gender}
+          country={country}
+          intellect={intellect}
+          looks={looks}
+          wealth={wealth}
+          health={health}
+          charisma={charisma}
+          happiness={happiness}
+          game={game}
+          anime={anime}
+          book={book}
+          movie={movie}/>
       </div>
     </div>
     );

@@ -17,6 +17,7 @@ export function Graphics(props) {
     return (
         <div>
             <input
+            class="form-control w-75"
             type="file"
             onChange={(e) => {
                 convertImage(e);
@@ -33,10 +34,10 @@ export function Graphics(props) {
             health={props.health}
             charisma={props.charisma}
             happiness={props.happiness}
-            games={props.games}
+            game={props.game}
             anime={props.anime}
-            books={props.books}
-            movies={props.movies}
+            book={props.book}
+            movie={props.movie}
             image={image}/>
         </div>
     );
