@@ -17,7 +17,7 @@ export function Graphics(props) {
     return (
         <div>
             <input
-            class="form-control w-75"
+            class="form-control w-75 m-1"
             type="file"
             onChange={(e) => {
                 convertImage(e);

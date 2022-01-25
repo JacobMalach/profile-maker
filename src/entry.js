@@ -50,7 +50,7 @@ export class Entry extends React.Component {
       <div>
         <h3>Enter {category}:</h3>
         <input 
-        class="form-control"
+        class="form-control mb-4"
         onChange={this.handleChange} 
         type={type} min={min} max={max} defaultValue={value} />
       </div>

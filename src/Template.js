@@ -157,7 +157,7 @@ export function Template(props) {
 
   return (
     <div>
-      <canvas ref={canvasRef} height="600" width="720" background style={{border:"black 3px solid"}}/>
+      <canvas ref={canvasRef} height="585" width="720" background style={{border:"black 3px solid"}}/>
       <Download onClick={handleClick}></Download>
     </div>
   );

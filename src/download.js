@@ -13,7 +13,7 @@ export class Download extends React.Component {
 
     render() {
         return(
-            <button onClick={this.handleClick}>Download</button>
+            <button class="btn btn-primary btn-lg btn-block" onClick={this.handleClick}>Download</button>
         )
     }
 }
