@@ -11,7 +11,7 @@ export function Template(props) {
     ctx.fillRect(0, 0, 1000, 1000);
     ctx.fillStyle = 'black';
     ctx.font = "30px Helvetica";
-    ctx.fillText("Upload Image", 450, 450);
+    ctx.fillText("Upload Image", 470, 450);
     ctx.font = "40px Century Gothic";
     ctx.fillStyle = 'black';
     ctx.fillText("Info:", 10, 40)
@@ -108,6 +108,7 @@ export function Template(props) {
     const imgSrc = props.image;
     var img = new Image();
     img.onload = () => {
+      ctx.clearRect(405, 270, 300, 300);
       ctx.drawImage(img, 405, 270, 300, 300);
     }
     img.src = imgSrc;
